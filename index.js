@@ -70,7 +70,7 @@ async function extractImages(inputPath, outputDir) {
       const imagePath = path.join(outputDir, imageName);
 
       // Extract the image to the output directory
-      fs.promises.writeFile(imagePath, entry.getData());
+      await fs.promises.writeFile(imagePath, entry.getData());
       console.log('Extracted image:', imageName);
     }
   }
@@ -134,7 +134,7 @@ async function windowsPdfToDocx(inputPath, outputPath, keepActive = false) {
   
 
 /**
-  * ! Not the best solution for ms word files any the fonts and file layout may changed whether use `unoconv` or `soffice` as they relay of libreoffice
+  * ! Not the best solution for ms word files fonts and layout may changed whether use `unoconv` or `soffice` as they relay of libreoffice
   * Convert Word document to PDF Linux specific function
   * @param inputFilePath - Path to the input DOCX file.
   * @param outputFilePath - Path to save the output PDF file.
