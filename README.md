@@ -17,7 +17,7 @@ npm i docx2pdf-converter
 Install the package via yarn:
 
 ```bash
-yarn i docx2pdf-converter
+yarn add docx2pdf-converter
 ```
 
 ## Usage
